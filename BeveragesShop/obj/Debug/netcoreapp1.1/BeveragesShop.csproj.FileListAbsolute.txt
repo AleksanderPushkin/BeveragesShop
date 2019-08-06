@@ -1,0 +1,5 @@
+C:\Users\Александр Пушкин\Downloads\BeveragesShop\BeveragesShop\bin\Debug\netcoreapp1.1\BeveragesShop.deps.json
+C:\Users\Александр Пушкин\Downloads\BeveragesShop\BeveragesShop\bin\Debug\netcoreapp1.1\BeveragesShop.runtimeconfig.json
+C:\Users\Александр Пушкин\Downloads\BeveragesShop\BeveragesShop\bin\Debug\netcoreapp1.1\BeveragesShop.runtimeconfig.dev.json
+C:\Users\Александр Пушкин\Downloads\BeveragesShop\BeveragesShop\obj\Debug\netcoreapp1.1\BeveragesShop.csprojResolveAssemblyReference.cache
+C:\Users\Александр Пушкин\Downloads\BeveragesShop\BeveragesShop\obj\Debug\netcoreapp1.1\BeveragesShop.AssemblyInfo.cs

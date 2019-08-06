@@ -1,0 +1,43 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<BeveragesShop.Models.Coins>
+<div class="d-flex justify-content-between flex-wrap">
+    @for (var i=0;i< Model.Count(); i++)
+    {
+        @if (!Model[i].IsActive || Model[i].CurrentCount == Model[i].MaxQty)
+        {
+
+    <div class="p-2 coins-div">
+        <p>
+        <span class="fa-stack fa-2x">
+            <i class="fa fa-ban fa-stack-2x" style="color:red"></i>
+            <span class="fa fa-stack-2x" style="font-size:30px; margin-top:15px;">@Model[i].Title</span>
+        </span>
+            </p>
+        <span>Прием монет номиналом @Model[i].Cost в данный момент не осуществляется</span>
+    </div>
+
+
+        }
+        else
+        {
+
+            <div class="p-2 coins-div">
+                <h1>
+                    @Model[i].Title
+                </h1>
+                <div class="input-group">
+                    @*<span class="input-group-btn">
+                            <button type="button" class="btn btn-danger btn-number" data-type="minus" data-field="Test" data-value="@item.Cost">
+                                <span class="fa fa-minus"></span>
+                            </button>
+                        </span>*@
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-success btn-number" name="Add_Coins[@i]" data-type="plus" data-field="TotalMoney" data-parent="Coins[@i].CurrentCount" data-value="@Model[i].Cost" min="0" max="@Model[i].MaxQty" count="@Model[i].Count">
+                            <span class="fa fa-plus"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        }
+    }
+</div>

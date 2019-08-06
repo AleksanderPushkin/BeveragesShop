@@ -1,0 +1,96 @@
+﻿@model BeveragesShop.Models.Payments
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+@if (ViewBag.Error != null)
+{
+    <h3 style="color:red">@ViewBag.Error</h3>
+}
+<form asp-action="Create">
+
+    @Html.HiddenFor(test => test.BeverageId)
+    @Html.HiddenFor(test => test.Count)
+    @Html.HiddenFor(test => test.Money)
+    @Html.HiddenFor(test => test.Change)
+    @Html.HiddenFor(test => test.Price)
+
+    @for (var i = 0; i < Model.Coins.Count(); i++)
+    {
+        @Html.HiddenFor(test => Model.Coins[i].Cost)
+        @Html.HiddenFor(test => Model.Coins[i].Count)
+        @Html.HiddenFor(test => Model.Coins[i].CurrentCount)
+        @Html.HiddenFor(test => Model.Coins[i].Id)
+        @Html.HiddenFor(test => Model.Coins[i].IsActive)
+        @Html.HiddenFor(test => Model.Coins[i].Title)
+        @Html.HiddenFor(test => Model.Coins[i].MaxQty)
+    }
+
+
+    <div class="d-flex justify-content-between flex-wrap">
+        <div class="p-2">
+            <div class="text-center">
+                <h1>Внесено</h1>
+                <h1 class="display-4 input-number" name="TotalMoney" min="0" max="1000">@Model.Money</h1>
+
+
+
+            </div>
+        </div>
+        <div class="p-2">
+            <div class="text-center">
+                <h1>Цена</h1>
+                <h1 class="display-4 input-number" name="BeverageCost" min="0" max="1000">0</h1>
+
+
+
+            </div>
+        </div>
+        <div class="p-2">
+            <div class="text-center">
+                <h1>Сдача</h1>
+                <h1 class="display-4 input-number" name="ChangeMoney" min="0" max="1000">@Model.Change</h1>
+
+
+
+            </div>
+        </div>
+        @*<span class="input-group-btn">
+                <button type="button" class="btn btn-danger btn-number" data-type="minus" data-field="Test" data-value="@item.Cost">
+                    <span class="fa fa-minus"></span>
+                </button>
+            </span>*@
+        <div class="p-2">
+            <span class="input-group-btn btn-group-vertical">
+                <button type="submit" class="btn btn-success btn-buy">
+                    <span class="fa fa-credit-card">Купить</span>
+                </button>
+                <button  class="btn btn-success btn-return" type="submit" asp-action="Change">
+                    <span class="fa fa-credit-card">Вернуть сдачу</span>
+                </button>
+            </span>
+        </div>
+    </div>
+
+
+
+
+    @await Html.PartialAsync("~/Views/Coins/_Grid.cshtml", Model.Coins)
+
+    @await Html.PartialAsync("~/Views/Beverages/_Grid.cshtml", Model.Beverages)
+
+
+
+
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        <script src="~/js/site-beverages.js" asp-append-version="true"></script>
+    }
+
+
+
+</form>

@@ -1,0 +1,22 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model BeveragesShop.Models.Payments
+@{
+    ViewData["Title"] = "Сдача";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div>
+    <div display="none" id="dialogReturn">
+        Получите сдачу
+        <ul>
+            @for (var i = 0; i < Model.Coins.Count(); i++)
+            {
+                <li>@Html.DisplayFor(test => Model.Coins[i].CurrentCount) по  @Html.DisplayFor(test => Model.Coins[i].Cost) р. </li>
+
+            }
+        </ul>
+    </div>
+</div>
+<div>
+    <a asp-action="Create">Вернуться</a>
+</div>

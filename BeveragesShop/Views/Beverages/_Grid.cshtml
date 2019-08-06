@@ -1,0 +1,37 @@
+﻿@model List<BeveragesShop.Models.Beverages>
+
+<div class="d-flex align-content-center flex-wrap">
+    @for(int i = 0; i < Model.Count(); i++)
+    {
+        
+        <div class="p-2 @(Model[i].Qty>0 ? "btn-select": "not-selectable beverage-pricenotok")" price="@Model[i].Price" name="beverages" BeverageId="@Model[i].Id">
+            @if (Model[i].Image != null)
+            {
+                <img src="data:image;base64,@System.Convert.ToBase64String(Model[i].Image)" class="beverage-img"/>
+            }
+            <div>
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(test => Model[i].Title)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(test => Model[i].Title)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(test => Model[i].Price)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(test => Model[i].Price)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(test => Model[i].Category)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(test => Model[i].Category)
+                    </dd>
+                </dl>
+            </div>
+            
+        </div>
+    }
+</div>

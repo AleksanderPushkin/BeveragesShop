@@ -1,0 +1,8 @@
+C:\Users\Александр Пушкин\.nuget\packages\microsoft.aspnetcore.app\2.1.0\build\netcoreapp2.1\netcoreapp1.0\BeveragesShop.deps.json
+C:\Users\Александр Пушкин\.nuget\packages\microsoft.aspnetcore.app\2.1.0\build\netcoreapp2.1\netcoreapp1.0\BeveragesShop.runtimeconfig.json
+C:\Users\Александр Пушкин\.nuget\packages\microsoft.aspnetcore.app\2.1.0\build\netcoreapp2.1\netcoreapp1.0\BeveragesShop.runtimeconfig.dev.json
+C:\Users\Александр Пушкин\Downloads\BeveragesShop\BeveragesShop\obj\Debug\netcoreapp1.0\BeveragesShop.csprojResolveAssemblyReference.cache
+C:\Users\Александр Пушкин\Downloads\BeveragesShop\BeveragesShop\obj\Debug\netcoreapp1.0\BeveragesShop.Properties.Resources.resources
+C:\Users\Александр Пушкин\Downloads\BeveragesShop\BeveragesShop\obj\Debug\netcoreapp1.0\BeveragesShop.csproj.GenerateResource.Cache
+C:\Users\Александр Пушкин\Downloads\BeveragesShop\BeveragesShop\obj\Debug\netcoreapp1.0\BeveragesShop.AssemblyInfo.cs
+C:\Users\Александр Пушкин\.nuget\packages\microsoft.aspnetcore.app\2.1.0\build\netcoreapp2.1\netcoreapp1.0\BeveragesShop.dll
